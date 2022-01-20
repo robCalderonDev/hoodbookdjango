@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif !important;
+   
+}
+.logo{
+    width: 200px;
+    margin-top: -80px;
+    margin-bottom: -50px;
+    padding-bottom: -50px;
+}
+.inputa{
+    
+    max-width: 400px!important;
+    padding:auto;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-color: #27649B  ;
+    box-shadow: 0 1px 1px  #27649B inset, 0 0 8px  #27649B ;
+    
+    
+    
+   
+   
+}
+
+.btn-iniciar{
+    
+    background-color: #82C149!important;
+    color: whitesmoke;
+    min-width: 120px;
+    border: none;
+    height: 45px;
+    border-radius: 5px;
+    margin: 5px;
+
+}
+.btn-crearCuenta{
+    background-color: #27649B!important;
+    min-width: 120px;
+    border: none;
+    height: 45px;
+    color: whitesmoke;
+    margin: 5px;
+    border-radius: 5px;
+
+}
+
+.inputab{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #27649B !important;
+    color: whitesmoke;
+    border-color: #27649B  !important;
+    box-shadow: 0 1px 1px  #27649B inset, 0 0 8px  #27649B!important ;
+    
+    font-weight: bolder;
+}
+.tematicas{
+    width: 200px;
+}
+.card{
+    
+    width: 100%;
+    margin: 20px;
+    border-radius: 5px;
+    width: 9.5rem;
+    
+    box-shadow:  0px 1px  10px rgba(0, 0, 0, 0.2);
+    transition:  all 400ms ease;
+    
+    
+ 
+}
+.card-img-bot{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.te{
+    background-color: #27649B;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: whitesmoke;
+    height: 25px;
+   
+    
+}
+.card:hover{
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+    
+}
+.tematica:hover{
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+    filter:brightness(1.5); /* 2 = 200% */ 
+
+}
+.tematica{
+    min-width: 12rem;
+    width: 20rem;
+    height: 200px;
+    margin: 20px;
+    padding: 0px;
+    border-radius: 12px;
+    transition:  all 500ms ease;
+    box-shadow:  0px 1px  10px rgba(0, 0, 0, 0.4);    
+}
+.xd{
+    background-color: whitesmoke;
+   
+    
+}
+.xd2{
+
+padding-left: 30px;
+
+
+}
+.perro{
+    background-color: #82C149;
+    height: 40px;
+    color: whitesmoke;
+    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.l6{
+    padding-top: 5px;
+    font-size: 20px;
+    
+    
+}
+.aut{
+    border-radius: 10px;
+    background-color: #2C67AE;
+    color: white;
+    font-size: 1.5rem;
+    
+}
+/* carusel de autores*/
+.autores{
+    margin: 10px;
+    width: 12rem;
+    
+}
+.img-autor{
+    height: 180px;
+}
+.btn-autor1{
+    border: none;
+    
+}
+/*footer*/
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer{
+    background-color: #273746;
+    padding-top:40px ;
+    
+    line-height: 1.5;
+}
+.contenedor-footer{
+    max-width: 1170px;
+    margin:auto;
+}
+ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+.footer-col{
+    width: 25%;
+    padding:0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #82C149;;
+    height: 2px;
+    box-sizing: border-box;
+    width: 60px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.5 ease;
+}
+.footer-col ul li a:hover{
+    color: white;
+}
+.social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #82C149;
+    transition: all 0.5 ease;
+}
+.social-links a:hover{
+    color: #82C149;
+    background-color: #ffffff;
+}
+.logo2{
+    margin-left: -10px;
+    max-width: 5rem;
+    max-height: 5rem;
+    width: 100%;
+    margin-bottom: 20px;
+   
+   
+   
+
+}
+.derechos{
+    margin-top: 20px;
+    height: 30px;
+    background-color: #82C149;
+    color: white;
+    padding-top: 5px ;
+}
+/*formulario*/
+.container-form{
+    color: white;
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width:400px;
+    border-radius: 10px;
+    font-size: 12px;
+    transition:  all 1ms ease;
+    box-shadow:  0px 0px  10px rgba(0, 0, 0, 0.4);   
+    background-image: radial-gradient(circle at 103.21% 30.63%, #8cc2ba 0, #73b4af 16.67%, #51a1a0 33.33%, #138b8f 50%, #00757f 66.67%, #006374 83.33%, #00566d 100%);}
+
+
+.registers{
+    padding-top: 20px;
+    
+}
+.input-registrarse{
+    border-radius: 10px;
+    height: 30px;
+    border: none;
+    margin: 5px;
+}
+.input-registrarse:focus { 
+    outline: none !important;
+    border-color: #82C149;
+    box-shadow: 0 0 10px #82C149;
+}
+.btn-registrarse2{
+    background-color:#82C149;
+    border: none;
+    color: whitesmoke;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+label.error{
+    color: #E9234D;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/*Libros*/
+
+.libro{
+    padding-left:50px;
+    padding-top: 50px;
+}
+.libro1{
+    width: 250;
+    height: 400px;
+    border-radius: 12px;
+    
+    
+}
+.claro{
+    color: #707070;
+    margin-right: 20px;
+}
+.titulo{
+    min-width: 200px
+}
+.contenido{
+    padding-right: 3rem;
+    max-width: 600px;
+    padding-left: 3rem;
+    padding-top: 50px;
+}
+.temas{
+    color:#707070 ;
+    margin-right: 12px;
+    font-size: 12px;
+}
+.content{
+    font-weight: lighter;
+    font-size: 12px;
+}
+.especificaciones{
+width: 50%;
+}
+.esp{
+   
+    padding-left: 20%;
+}
+.descargar{
+    background-color: #82C149;
+    color: #ffffff;
+    border: none;
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 2px;
+    transition: all 0.5 ease;
+}
+.descargar:hover{
+    filter:brightness(1.1);
+    
+}
+.contenedorL{
+    margin-bottom: 50px;
+}
+/*Librros*/
+.dd{
+   
+  display: flex;
+  
+  align-items: center;
+  
+}
+.tituloLibros{
+   
+    float: left;
+    position: relative;
+    
+    width: 10%;
+    margin-right:3rem;
+    
+}
+.hrl{
+    position: relative;
+    text-align: center;
+    width: 80%;
+    border: solid 4px ;
+    color: (255, 255, 255, 0.2);
+    
+    
+}
+
+
+.categoriasL{
+    
+    height: 800px;
+    
+   
+ 
+    width: 20% ;
+   
+    box-shadow:  0px 1px  2px rgba(0, 0, 0, 0.2);
+    background-color: rgb(243, 242, 242);
+    border-radius: 5px; 
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border:solid 0.1px #b6f8d2;
+}
+.conlibros{
+  
+    height: 800px;
+    width: 60%;
+    
+    margin-bottom: 50px;
+    box-shadow:  0px 1px  2px rgba(0, 0, 0, 0.2);
+    background-color: rgb(243, 242, 242);
+    border-radius: 5px; 
+    
+    border:solid 0.1px #b6eaf8;
+  
+}
+/*Autores*/
+.tituloA{
+ text-align: center;
+}
+.hra{
+    
+    color: black;
+    
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    border:solid 1.5px;
+   
+    
+    
+}
+.autoresp{
+    background-color: rgba(245, 245, 245, 0.952);
+    width: 80%;
+    height: 1000px;
+   
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+/*autor*/
+.divautor{
+    
+    height: 600px;
+    margin-top: 50px;
+}
+.divimgautor{
+   
+    width: 50% ;
+}
+.fotoautor{
+    width: 450px;
+    height: 500px;
+    border-radius: 8px;
+    margin-bottom: auto ;
+    
+    
+    
+}
+.infoautor{
+    
+    width: 50%;
+}
+
+
+@media screen and (max-width: 800px){
+   
+    .categoriasL,.divimgautor{width: 400px;margin: 0 auto;margin-bottom: 20px}
+    .conlibros,.infoautor{width: 400px;}
+    .derechos{height: 50px;}
+    .autoresp{width: 90%;}
+    .fotoautor{height: 400px;}
+    .divimgautor{margin-bottom: 0px;padding-bottom: 0px;}
+    
+}
+
+

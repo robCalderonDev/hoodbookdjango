@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+{% block contenido %}
+{% load static %}
+
+<div class="container-fluid  d-flex   row contenedorL ">
+
+    <div class="container-fluid col libro d-flex justify-content-center">
+        
+       <img src=" {% static 'core/img/libro1.jpg' %}" class="libro1  "> 
+    </div>
+
+    <div class=" contenido  ">
+      <div class="titulo">
+        <h2>Metro 2035</h2>
+        <div class="d-flex">
+          <h6 class="claro">Dimitry Glujovski</h6>
+          <div class="d-flex justify-content-center temas">
+            <h7 class="temas">Terror</h7>
+            <h7 class="temas">Acción</h7>
+            <h7 class="temas">Suspenso</h7>
+          </div>
+        </div>
+      </div>
+      <div class="content ">
+        <h5>Sinopsis</h5>
+          <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
+            laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam 
+            libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+            electus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus ."
+          </p>
+          <h6>Especificaciones</h6>
+          <div class="especi d-flex">
+          <div class="especificaciones row">
+            <h7 class="claro">Autor: dimitry Glujovski</h7>
+            <h7 class="claro">Editorial: BANANA</h7>
+            <h7 class="claro">Paginas: 450</h7>
+            <h7 class="claro">Idioma: Español</h7>
+          </div>
+          <div class="esp ">
+            <button type="button " class="descargar">Descargar</button>
+          </div>
+          
+        </div>
+      </div>
+     
+         
+    
+    </div>
+  </div>
+          
+ 
+{% endblock %}
