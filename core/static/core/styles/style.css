@@ -434,8 +434,9 @@ width: 50%;
 /*autor*/
 .divautor{
     
-    height: 600px;
+    
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .divimgautor{
    
@@ -451,19 +452,31 @@ width: 50%;
     
 }
 .infoautor{
-    
     width: 50%;
 }
+.tituloautor{
 
+    text-align:center;
+    
+}
+.citaautor{
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 15px;
+}
+.histoautor{
+    margin-top: 80px;
+}
 
 @media screen and (max-width: 800px){
    
     .categoriasL,.divimgautor{width: 400px;margin: 0 auto;margin-bottom: 20px}
-    .conlibros,.infoautor{width: 400px;}
+    .conlibros,.infoautor{width: 400px; }
     .derechos{height: 50px;}
     .autoresp{width: 90%;}
     .fotoautor{height: 400px;}
     .divimgautor{margin-bottom: 0px;padding-bottom: 0px;}
+    .tituloautor{margin-top: 45px;}
     
 }
 
