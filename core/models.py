@@ -6,7 +6,7 @@ class Autor(models.Model):
     nombre = models.CharField(max_length=50);
     cita = models.TextField();
     historia = models.TextField();
-    
+    imagenAutor = models.ImageField(upload_to="libros", null=True)
     def __str__(self):
         return self.nombre
 

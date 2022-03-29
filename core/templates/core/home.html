@@ -16,53 +16,22 @@
   </div>
        
   <div class="container  xd1  ">
-      <div class="container xd2 d-flex justify-content-evenly  row ">
+    
+      <div class="container xd2 d-flex justify-content-evenly libro  row ">
+        {% for l in libros %}
         <div class="card  " >
-          <img src="{% static 'core/img/libro1.jpg' %}" class="card-img-top" alt="...">
+          {% if l.imagenLibro %}
+          <img src="{{ l.imagenLibro.url }}" class="card-img-top" alt="...">
+          {% endif %}
           <div class="card-body small">
-            <h6 class="card-title">Metro 2035</h6>
-            <h8 class="card-subtitle mb-2 text-muted">Dmitri Glujovski</h8>
+            <h6 class="card-title">{{ l.nombre  }}</h6>
+            <h8 class="card-subtitle mb-2 text-muted">{{ l.autor }}</h8>
             
           </div>
         </div>
-        <div class="card " >
-          <img src="{% static 'core/img/libro2.jpg' %}" class="card-img-top" alt="...">
-          <div class="card-body small">
-            <h6 class="card-title">Future</h6>
-            <h8 class="card-subtitle mb-2 text-muted">Dmitri Glujovski</h8>
-            
-          </div>
-        </div>
-          <div class="card " >
-            <img src="{% static 'core/img/libro3.jpg' %}" class="card-img-top" alt="...">
-            <div class="card-body small">
-              <h6 class="card-title">La granja de los animales</h6>
-              <h8 class="card-subtitle mb-2 text-muted">George Orwell</h8>
-            </div>
-          </div>
-          <div class="card " >
-            <img src="{% static 'core/img/libro3.jpg' %}" class="card-img-top" alt="...">
-            <div class="card-body small">
-              <h6 class="card-title">La granja de los animales</h6>
-              <h8 class="card-subtitle mb-2 text-muted">George Orwell</h8>
-            </div>
-          </div>
-          <div class="card " >
-            <img src="{% static 'core/img/libro3.jpg' %}" class="card-img-top" alt="...">
-            <div class="card-body small">
-              <h6 class="card-title">La granja de los animales</h6>
-              <h8 class="card-subtitle mb-2 text-muted">George Orwell</h8>
-            </div>
-          </div>
-          <div class="card " >
-            <img src="{% static 'core/img/libro3.jpg' %}" class="card-img-top" alt="...">
-            <div class="card-body small">
-              <h6 class="card-title">La granja de los animales</h6>
-              <h8 class="card-subtitle mb-2 text-muted">George Orwells</h8>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
+      
       
       <!--autores-->
     <div class="container">
@@ -71,47 +40,18 @@
     </div>
 
    
-    <div class="container  d-flex flex-wrap ">
+    <div class="container  d-flex flex-wrap justify-content-evenly">
+      {% for a in autores %}
       <div class="card autores" >
-        <img src="{% static 'core/img/rowling.jpg' %}" class="card-img-top  img-autor" alt="...">
+        <img src="{{ a.imagenAutor.url }}" class="card-img-top  img-autor" alt="...">
         
-          <button class="btn-autor1 "><h5 >J.K Rowling</h5></button>
+          <h5 class="nombre-autorhome" >{{ a.nombre }}</h5>
           
           
        
       </div>
-      <div class="card autores" >
-        <img src="{% static 'core/img/tolkien.jpg' %}" class="card-img-top img-autor " alt="...">
-        
-          <button class="btn-autor1 "><h5 >J.R.R Tolkien</h5></button>
-          
-          
-       
-      </div>
-      <div class="card autores" >
-        <img src="{% static 'core/img/king.jpg' %} " class="card-img-top img-autor " alt="...">
-        
-          <button class="btn-autor1 "><h5 >Stephen king</h5></button>
-          
-          
-       
-      </div>
-      <div class="card autores" >
-        <img src="{% static 'core/img/dimitry.jpg' %}" class="card-img-top img-autor " alt="...">
-        
-          <button class="btn-autor1 "><h5 >Dimitry Glujovski</h5></button>
-          
-          
-       
-      </div>
-      <div class="card autores" >
-        <img src="{% static 'core/img/agatha.jpg' %}" class="card-img-top img-autor " alt="...">
-        
-          <button class="btn-autor1 "><h5 class="nombre">Agatha Christie</h5></button>
-          
-          
-       
-      </div>
+      {% endfor %}
+    
     
       
     </div>

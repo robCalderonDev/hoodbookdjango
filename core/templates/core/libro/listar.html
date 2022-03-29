@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+
+<table class="table table-striped table-hover table-responsive-sm">
+    <tr>
+        <th>Nombre</th>
+        <th>Autor</th>
+        <th>Paginas</th>
+        <th>Editorial</th>
+        
+    </tr>
+    {% for l in libros %}
+    <tr>
+        <td>{{ l.nombre | title }}</td>
+        <td>{{ l.autor }}</td>
+        <td>{{ l.paginas }}</td>
+        <td>{{ l.editorial }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
