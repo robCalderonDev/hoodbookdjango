@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,get_object_or_404
 from .models import Libro ,Autor
 from .forms import LibroForm
-
+from django.contrib  import messages
+from django.core.paginator import Paginator
+from django.http import Http404
 # Create your views here.
 def home(request):
     libros = Libro.objects.all()
@@ -39,8 +41,42 @@ def  agregar_libro(request):
 
 def listar_libros(request):
     libros = Libro.objects.all()
+    page = request.GET.get('page', 1)
+
+    try:
+        paginator =Paginator(libros, 2)
+        libros = paginator.page(page)
+    except:
+        raise Http404
+
+
+
     data = {
-        'libros' :libros
+        'entity' :libros,
+        'paginator':paginator,
     }
 
     return render(request,'core/libro/listar.html',data)
+
+def modificar_libro(request,id):
+    libro =get_object_or_404(Libro,id=id)
+    data={
+        'form':LibroForm(instance=libro)
+    }
+    if request.method =='POST':
+        formulario =LibroForm(data =request.POST, instance=libro,files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request,"Modificado correctamente")
+            return redirect(to="listar_libros")
+        data["form"] = formulario
+        
+    
+    return render(request,'core/libro/modificar.html',data)
+
+def eliminar_libro(request,id):
+    libro = get_object_or_404(Libro,id=id)
+    libro.delete()
+    messages.success(request,"Eliminado correctamente")
+
+    return redirect(to ="listar_libros")

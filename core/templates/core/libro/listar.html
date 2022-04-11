@@ -1,23 +1,64 @@
 {% extends 'core/base.html' %}
 
+
+
 {% block contenido %}
 
-<table class="table table-striped table-hover table-responsive-sm">
+
+{% block  js %}
+
+    <script>
+        function eliminarLibro(id){
+            
+            Swal.fire({
+               "title": "Estas seguro ?",
+               "text" : "Esta acción no se puede deshacer",
+               "icon" : "question",
+               "showCancelButton": true,
+               "cancelButtonText": "No, Cancelar",
+               "confirmButtonText":"Eliminar",
+               "confirmButtonColor": "#D43333"
+           })
+           .then(function(result){
+               if (result.isConfirmed){
+                   window.location.href = "/eliminar-libro/"+id+"/"
+               }
+           })
+        }
+    </script>
+
+{% endblock %}
+
+<div class="container-fluid mt-3">
+   <h2 class="text-center">Listado de Libros </h2> 
+</div>
+<table class="table table-striped  table-responsive-sm">
     <tr>
         <th>Nombre</th>
         <th>Autor</th>
         <th>Paginas</th>
         <th>Editorial</th>
+        <th>Opciones</th>
         
     </tr>
-    {% for l in libros %}
+    {% for l in entity %}
     <tr>
         <td>{{ l.nombre | title }}</td>
         <td>{{ l.autor }}</td>
         <td>{{ l.paginas }}</td>
         <td>{{ l.editorial }}</td>
+        <td>
+            <a href="{% url 'modificar_libro' l.id %}" class="btn btn-secondary btn-sm">modificar</a>
+            <a href="#" onclick="eliminarLibro({{ l.id }})" class="btn btn-danger btn-sm">Eliminar</a>
+        </td>
+      
     </tr>
     {% endfor %}
 </table>
+<br>
+<br>
 
+<div>
+    {% include 'core/paginator.html' %}
+</div>
 {% endblock %}

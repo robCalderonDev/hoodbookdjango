@@ -161,7 +161,7 @@ padding-left: 30px;
 .footer{
     background-color: #273746;
     padding-top:40px ;
-    
+   
     line-height: 1.5;
 }
 .contenedor-footer{
@@ -245,51 +245,6 @@ ul{
     background-color: #82C149;
     color: white;
     padding-top: 5px ;
-}
-/*formulario*/
-.container-form{
-    color: white;
-    
-    margin-top: 50px;
-    margin-bottom: 50px;
-    max-width:400px;
-    border-radius: 10px;
-    font-size: 12px;
-    transition:  all 1ms ease;
-    box-shadow:  0px 0px  10px rgba(0, 0, 0, 0.4);   
-    background-image: radial-gradient(circle at 103.21% 30.63%, #8cc2ba 0, #73b4af 16.67%, #51a1a0 33.33%, #138b8f 50%, #00757f 66.67%, #006374 83.33%, #00566d 100%);}
-
-
-.registers{
-    padding-top: 20px;
-    
-}
-.input-registrarse{
-    border-radius: 10px;
-    height: 30px;
-    border: none;
-    margin: 5px;
-}
-.input-registrarse:focus { 
-    outline: none !important;
-    border-color: #82C149;
-    box-shadow: 0 0 10px #82C149;
-}
-.btn-registrarse2{
-    background-color:#82C149;
-    border: none;
-    color: whitesmoke;
-    border-radius: 5px;
-    width: 100px;
-    height: 40px;
-    font-size: 15px;
-    margin-left: 20px;
-    margin-bottom: 5px;
-}
-label.error{
-    color: #E9234D;
-    font-size: 12px;
-    font-weight: bold;
 }
 
 /*Libros*/
@@ -468,6 +423,26 @@ width: 50%;
     margin-top: 80px;
 }
 
+/*agregar-libro page*/
+
+.container-form{
+    
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border:solid 0.5px rgb(212, 212, 212);
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+
+}
+/*Listar libros page*/
+
+@media screen and (max-width: 570px){
+    .container-form{margin-left:0;
+
+    }
+}
 @media screen and (max-width: 800px){
    
     .categoriasL,.divimgautor{width: 400px;margin: 0 auto;margin-bottom: 20px}
