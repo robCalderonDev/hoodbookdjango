@@ -18,6 +18,25 @@ class Editorial (models.Model):
         return self.nombre
 
 
+class GeneroPrimario (models.Model):
+   nombre=models.CharField(max_length=30);
+    
+   def __str__(self):
+        return self.nombre
+
+class GeneroSecundario (models.Model):
+   nombre=models.CharField(max_length=30);
+    
+   def __str__(self):
+        return self.nombre
+class GeneroTerciario (models.Model):
+   nombre=models.CharField(max_length=30);
+    
+   def __str__(self):
+        return self.nombre
+
+
+
 class Libro(models.Model):
     nombre = models.CharField(max_length=50);
     sinopsis = models.TextField();
@@ -27,6 +46,12 @@ class Libro(models.Model):
     fecha_estreno = models.DateField();
     autor = models.ForeignKey(Autor,on_delete=models.PROTECT)
     imagenLibro = models.ImageField(upload_to="libros", null=True)
+    generoPrimario = models.ForeignKey(GeneroPrimario, on_delete=models.PROTECT);
+    generoSecundario = models.ForeignKey(GeneroSecundario, on_delete=models.PROTECT);
+    generoTerciario = models.ForeignKey(GeneroTerciario, on_delete=models.PROTECT);
 
     def __str__(self):
        return  self.nombre
+
+       
+    

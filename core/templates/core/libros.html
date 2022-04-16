@@ -10,47 +10,49 @@
   <hr class="hrl">  
 </div>
 
-
-
 <div class="container-fluid d-flex flex-wrap  ">
   <div class="container-fluid  categoriasL ">
    <h3 class="mt-2">Categorias</h3>
    <br>
-   Aventura
-   <br><br>
   
-   Biografias
-   <br><br>
-   Ciencias
-   <br><br>
-   cyberpunk
-   <br><br>
-   Economia
-   <br><br>
-   Terror
-   <br><br>
-   Ciencia Ficción
-   <br><br>
-   Computación
-   <br><br>
-   Suspenso
-   <br><br>
-   Infantil y juvenil
-   <br><br>
-   Gastronomia
-   <br><br>
-   Zoologia y Animales
-   <br><br>
-   Videojuegos
-   <br><br>
-   Salud
+    {% for g in generoPrimario %}
+      <h6 class="categoria"> {{ g.nombre }}</h6>
+    {% endfor %}
+
   </div>
   
 
 
   <div class="container-fluid conlibros ">
-   <h3>Libros</h3>
-
+   
+    <div class="container-fluid  d-flex flex-wrap justify-content-evenly">
+     
+      {% for l in libros %}
+     
+        <div class="card" >
+          <a href="{% url 'libro' l.id %}" >
+          {% if l.imagenLibro %}
+          <img src="{{ l.imagenLibro.url }}" class="card-img-top" alt="...">
+          {% endif %}
+          
+            <div class="card-body small">
+            
+              <h6 class="card-title">{{ l.nombre  }}</h6>
+              <h8 class="card-subtitle mb-2 text-muted">{{ l.autor }}</h8>
+            
+              
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      
+     
+   
+   
+    <div>
+      {% include 'core/paginator.html' %}
+    </div>
    
   </div>
 

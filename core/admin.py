@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Libro,Editorial,Autor
+from .models import GeneroPrimario, GeneroSecundario, Libro,Editorial,Autor,GeneroPrimario,GeneroSecundario,GeneroTerciario
 # Register your models here.
 
 class LibroAdmin(admin.ModelAdmin):
@@ -13,4 +13,9 @@ class LibroAdmin(admin.ModelAdmin):
 admin.site.register(Libro,LibroAdmin)
 admin.site.register(Editorial)
 admin.site.register(Autor)
+admin.site.register(GeneroPrimario)
+admin.site.register(GeneroSecundario)
+admin.site.register(GeneroTerciario)
+
+
 

@@ -4,19 +4,18 @@
 
 <div class="container-fluid d-flex flex-wrap divautor ">
   <div class="container-fluid d-flex justify-content-center divimgautor ">
-    <img alt="autor" class="img-fluid fotoautor" src="{% static 'core/img/tolkien.jpg' %}">
+    <img alt="autor" class="img-fluid fotoautor" src="{{ autor.imagenAutor.url}}">
    
   </div>
   
 
 
   <div class="container-fluid infoautor  ">
-   <h2 class=" tituloautor">J.R.R Tolkien</h2>
-    <p class="citaautor">"Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-       Qui ea omnis corrupti delectus numquam excepturi quia non enim sequi magni"
+   <h2 class=" tituloautor">{{ autor.nombre }}</h2>
+    <p class="citaautor">{{ autor.cita}}
     </p>
     <p class="histoautor">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aperiam quis possimus, unde pariatur magni error nesciunt quia maiores, ad veniam est similique? Nostrum voluptates veritatis quidem aut iste dolor molestias quam in esse tempora pariatur, dolore rem eaque. Officia, omnis. Consequatur error sapiente ad eos voluptatibus placeat eum quidem commodi, molestias excepturi ea, blanditiis hic recusandae reiciendis dolor eaque animi eligendi. Libero quos perferendis saepe officiis nam esse, maiores perspiciatis numquam cum consectetur hic placeat consequuntur tenetur nisi, ex dicta autem? Impedit quidem fugiat ad, earum quae nostrum est.
+      {{autor.historia}}
     </p>
   </div>
 

@@ -5,8 +5,23 @@
     <h1 class="mt-4 tituloA">Autores</h1>
     <hr class="hra mb-4">
 </div>
+
 <div class="container-fluid autoresp">
-    hola
+    <div class="container  d-flex flex-wrap justify-content-evenly">
+        {% for a in autores %}
+       
+          <div class="card autores" >
+            <a href="{% url 'autor' a.id %}">
+            <img src="{{ a.imagenAutor.url }}" class="card-img-top  img-autor" alt="...">
+            <h6 class="nombre-autorhome" >{{ a.nombre }}</h5>
+            </a>
+          </div>
+     
+        {% endfor %}
+      
+      
+        
+      </div>
 </div>
 
 
