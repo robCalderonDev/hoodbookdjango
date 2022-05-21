@@ -16,13 +16,19 @@
     <img src="{% static 'core/img/cyberpunk.jpg' %}" class="img-fluid tematica" alt="...">
       
   </div>
+<div class="container ">
+  <h2 class="text-center   p-2 aut">Ultimos libros</h2>
+</div>
+  
 </div>
        
   <div class="container  xd1  ">
     
       <div class="container xd2 d-flex justify-content-evenly libro  row ">
-        {% for l in libros %}
-        <div class="card  " >
+       
+        {% for l in libros  %}
+        <div class="card" >
+          <a href="{% url 'libro' l.id %}">
           {% if l.imagenLibro %}
           <img src="{{ l.imagenLibro.url }}" class="card-img-top" alt="...">
           {% endif %}
@@ -31,10 +37,14 @@
             <h8 class="card-subtitle mb-2 text-muted">{{ l.autor }}</h8>
             
           </div>
+        </a>
         </div>
         {% endfor %}
       </div>
-      
+      <div class="container d-flex justify-content-center">
+        
+       <a href="{% url 'libros' %}"> <button  class="btnMasLibros" >Más libros</button></a>
+      </div>
       
       <!--autores-->
     <div class="container">
@@ -58,5 +68,6 @@
       
     </div>
 </div>
+
 
     {% endblock %}

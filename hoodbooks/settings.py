@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+LOGIN_REDIRECT_URL='/'
+LOGOUT_REDIRECT_URL='/'
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'colorfield',
     'crispy_forms',
     "crispy_bootstrap5",
+    "datetimewidget",
    
 ]
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -130,6 +132,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 import os 
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 

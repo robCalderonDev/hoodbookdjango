@@ -38,10 +38,17 @@
                       <button class=" btn btn-outline-success inputab " type="submit">Buscar</button>
                     </form>
                 </div>
-                <div class="div d-flex flex-row justify-content-center">
-                    <button class="btn-iniciar  mt-2 ">Iniciar Sesión</button>
+
+                <!-- <div class="div d-flex flex-row justify-content-center">
+                   
                     <a href="register.html"> <button class="btn-crearCuenta mt-2 ">Crear cuenta </button></a>
-                </div>
+                </div>-->
+                {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}"> <button class="btn-iniciar  mt-2 ">Cerrar Sesión</button></a>
+                <a href="#">@{{user.username}}</a>
+                {% else %}
+                <a href="{% url 'login' %}"> <button class="btn-iniciar  mt-2 ">Iniciar Sesión</button></a>
+               {% endif %}
                 
               </div>
               

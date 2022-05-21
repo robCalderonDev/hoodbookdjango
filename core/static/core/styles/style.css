@@ -58,6 +58,9 @@ body{
     
     font-weight: bolder;
 }
+.content{
+    min-height: calc(100vh - 30px - 250px);
+}
 .tematicas{
     width: 200px;
 }
@@ -128,6 +131,20 @@ body{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.btnMasLibros{
+    background-color: #866095;
+    width: 130px;
+    border:none;
+    height: 35px;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    transition: all 200ms ease;
+}
+.btnMasLibros:hover{
+    background-color: #8b7593;
+   
+}
 .l6{
     padding-top: 5px;
     font-size: 20px;
@@ -136,7 +153,7 @@ body{
 }
 .aut{
     border-radius: 10px;
-    background-color: #2C67AE;
+    background-color: #405aa9;
     color: white;
     font-size: 1.5rem;
     
@@ -166,6 +183,7 @@ body{
     padding-top:40px ;
    
     line-height: 1.5;
+    
 }
 .contenedor-footer{
     max-width: 1170px;
@@ -440,8 +458,15 @@ width: 50%;
     background-color: rgb(241, 241, 241);
 
 }
-/*Listar libros page*/
-
+/*Login admin*/
+.contLoginAdmin{
+    margin-top: 50px;
+    padding-top:25px;
+    border-radius: 5px;
+    padding-bottom: 25px;
+    background-color: #f9f9f9;
+    border:solid 0.5px rgb(212, 212, 212);
+}
 @media screen and (max-width: 570px){
     .container-form{margin-left:0;
 

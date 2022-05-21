@@ -4,21 +4,23 @@
 
 {% load crispy_forms_tags %}
 
- 
-<div class="container col-12 col-md-6 offset-md-3 row  container-form">
-    <div class="container-fluid">
-        <h3>Modificar Libro</h3>
-        <hr>
+ <div class="container-fluid">
+    <div class="container col-12 col-md-6 offset-md-3 row  container-form">
+        <div class="container-fluid">
+            <h3>Modificar Libro</h3>
+            <hr>
+        </div>
+        
+        
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token  %}
+            {{ form | crispy }}
+            <input type="submit" value="Editar" class="btn btn-primary">
+            {{ mensaje }}
+        </form>
     </div>
-    
-    
-    <form action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token  %}
-        {{ form | crispy }}
-        <input type="submit" value="Editar" class="btn btn-primary">
-        {{ mensaje }}
-    </form>
-   </div>
+ </div>
+
     
 
 

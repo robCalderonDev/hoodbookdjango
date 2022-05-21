@@ -8,8 +8,11 @@ from django.http import Http404
 def home(request):
     libros = Libro.objects.all()
     autores= Autor.objects.all()
+    
+    librosReverse= libros[::-1]
+    primerosLibros= librosReverse[0:4]
     data  ={  
-        'libros':libros,
+        'libros':primerosLibros,
         'autores':autores
     }
 
@@ -41,6 +44,7 @@ def libros(request):
        
     }
     return render(request,'core/libros.html',data)
+
 def autores(request):
     autores = Autor.objects.all()
     data ={
